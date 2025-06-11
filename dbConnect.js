@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
-const url = "mongodb+srv://admin:admin@money-tracker.m2tdyk0.mongodb.net/?retryWrites=true&w=majority"
+require('dotenv').config(); // Add this if not already present
+const uri = process.env.MONGO_URI;
 
 mongoose.connect(url);
 
