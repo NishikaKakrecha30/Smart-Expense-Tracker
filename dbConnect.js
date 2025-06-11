@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-require('dotenv').config(); // Add this if not already present
+require('dotenv').config();
 const uri = process.env.MONGO_URI;
 
 mongoose.connect(url);
