@@ -25,7 +25,7 @@ if(process.env.NODE_ENV === 'production')
 
 
 
-const DATABASE_URL = "mongodb+srv://sumit:sumit@money-1.ik15izv.mongodb.net/?retryWrites=true&w=majority"
+const uri = process.env.MONGO_URI;
 
 mongoose.connect( DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => {console.log(`server running on port ${PORT}`)}))
